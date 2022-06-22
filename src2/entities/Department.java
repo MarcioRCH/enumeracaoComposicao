@@ -8,7 +8,7 @@ public class Department {
 	public Department() {
 		
 	}
-	public Department(String name, Integer payday) {
+	public Department(String name, Integer payDay) {
 		this.name = name;
 		this.payDay = payDay;
 	}
