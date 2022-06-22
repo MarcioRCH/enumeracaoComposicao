@@ -12,18 +12,18 @@ public class Worker {
 	private WorkerLevel level;
 	private Double baseSalary;
 	
-	private Department department;
+	private Departments departments;
 	//list representing that a worker may have multiple contracts
 	private List<HourContract> contracts = new ArrayList<>();
 	
 	public Worker() {
 		
 	}
-	public Worker(String name, WorkerLevel level, Double baseSalary, Department department) {
+	public Worker(String name, WorkerLevel level, Double baseSalary, Departments departments) {
 		this.name = name;
 		this.level = level;
 		this.baseSalary = baseSalary;
-		this.department = department;
+		this.departments = departments;
 	}
 	public String getName() {
 		return name;
@@ -43,11 +43,11 @@ public class Worker {
 	public void setBaseSalary(Double baseSalary) {
 		this.baseSalary = baseSalary;
 	}
-	public Department getDepartment() {
-		return department;
+	public Departments getDepartment() {
+		return departments;
 	}
-	public void setDepartment(Department department) {
-		this.department = department;
+	public void setDepartment(Departments departments) {
+		this.departments = departments;
 	}
 	public List<HourContract> getContracts() {
 		return contracts;

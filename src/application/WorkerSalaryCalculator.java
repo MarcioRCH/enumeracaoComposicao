@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Department;
+import entities.Departments;
 import entities.HourContract;
 import entities.Worker;
 import entities.enums.WorkerLevel;
@@ -28,7 +28,7 @@ public class WorkerSalaryCalculator {
 		System.out.print("Base salary: ");
 		double baseSalary = sc.nextDouble();
 		
-		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Department(departmentName));
+		Worker worker = new Worker(workerName, WorkerLevel.valueOf(workerLevel), baseSalary, new Departments(departmentName));
 		
 		System.out.print("How many contracts to this worker? ");
 		int n = sc.nextInt();
