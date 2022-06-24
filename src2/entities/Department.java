@@ -7,18 +7,16 @@ public class Department {
 	
 	private String name;
 	private Integer payDay;
-	private Employee employee;
 	private Address address;
 	
-	private List<Employee> emps = new ArrayList<>();
+	private List<Employee> employees = new ArrayList<>();
 	
 	public Department() {
 		
 	}
-	public Department(String name, Integer payDay, Employee employee, Address address) {
+	public Department(String name, Integer payDay, Address address) {
 		this.name = name;
 		this.payDay = payDay;
-		this.employee = employee;
 		this.address = address;
 	}
 	public String getName() {
@@ -33,12 +31,6 @@ public class Department {
 	public void setPayDay(Integer payDay) {
 		this.payDay = payDay;
 	}
-	public Employee getEmployee() {
-		return employee;
-	}
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
-	}
 	public Address getAddress() {
 		return address;
 	}
@@ -46,12 +38,19 @@ public class Department {
 		this.address = address;
 	}
 	public List<Employee> getEmp(){
-		return emps;
+		return employees;
 	}
 	public void addEmp(Employee emp) {
-		emps.add(emp);
+		employees.add(emp);
 	}
 	public void removeEmp(Employee emp) {
-		emps.remove(emp);
+		employees.remove(emp);
+	}
+	public double payroll() {
+		double sum = 0;
+		for(Employee e : employees) {
+			sum += e.getSalary();
+		}
+		return sum;
 	}
 }
